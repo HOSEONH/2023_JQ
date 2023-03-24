@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/> 
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <style>
+        /* 슬릭의 화살표 모양 수정 */
+        /* .slick-next::before 와 .slick-prev::before */
+        .slick-next::before {
+            /* background-image를 이용해서 바꿀 수 있다 */
+            content: '👻';
+            color: rgb(207, 189, 255);
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body style="background-color: gray;">
+    <div class="single-item" style="margin: 0 50px;">
+        <div>your content 1</div>
+        <div>your content 2</div>
+        <div>your content 3</div>
+        <div>your content 4</div>
+    </div>
+    <script>
+        $('.single-item').slick({
+            autoplay: true,
+            infinite: true,
+            slidesToShow: 2,
+            slidesToScroll: 2
+        }); //'.single-item는 지정해준 클래스 이름 <div class="your-class"을 변경하였음
+    </script>
+</body>
+</html>
